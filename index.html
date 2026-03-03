@@ -6,11 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdul Basit | AI Workforce Decision Systems</title>
 
-<meta property="og:title" content="Abdul Basit | AI Workforce Decision Systems">
-<meta property="og:description" content="Forecast Governance. Intraday Intelligence. AI-Assisted Workforce Decision Infrastructure.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://abdulbasiteverise.github.io/">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -25,34 +20,44 @@ body{
   overflow-x:hidden;
 }
 
-/* ANIMATED GRADIENT BG */
-.bg{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background: radial-gradient(circle at 20% 30%, rgba(0,200,255,0.15), transparent 40%),
-              radial-gradient(circle at 80% 70%, rgba(37,99,235,0.15), transparent 40%);
-  z-index:-2;
-  animation: pulse 8s infinite alternate;
-}
-
-@keyframes pulse{
-  from{filter:blur(20px)}
-  to{filter:blur(60px)}
-}
-
-/* PARTICLES */
-canvas{
+/* STICKY NAV */
+.nav{
   position:fixed;
   top:0;
-  left:0;
-  z-index:-1;
+  width:100%;
+  background:rgba(5,8,20,0.85);
+  backdrop-filter:blur(10px);
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav a{
+  color:#00f0ff;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+
+.nav a:hover{
+  text-shadow:0 0 10px #00f0ff;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:120px 20px 80px;
+  padding:160px 20px 100px;
+}
+
+.hero img{
+  width:130px;
+  border-radius:50%;
+  border:3px solid #2563eb;
+  box-shadow:0 0 30px rgba(0,240,255,0.6);
+  margin-bottom:25px;
 }
 
 .hero h1{
@@ -72,14 +77,16 @@ canvas{
   margin-right:auto;
 }
 
+/* BUTTONS */
 .btn{
   display:inline-block;
   margin:12px;
-  padding:12px 26px;
+  padding:13px 28px;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
   transition:0.3s;
+  position:relative;
 }
 
 .primary{
@@ -94,32 +101,25 @@ canvas{
 
 .btn:hover{
   transform:translateY(-4px);
-  box-shadow:0 0 25px rgba(0,240,255,0.7);
+  box-shadow:0 0 25px rgba(0,240,255,0.8);
 }
 
 /* SECTION */
 .section{
   max-width:1100px;
   margin:auto;
-  padding:80px 20px;
+  padding:100px 20px;
 }
 
-/* GLASS CARD */
+/* CARD */
 .card{
   background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(14px);
+  backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,0.08);
   border-radius:18px;
   padding:35px;
   margin:25px 0;
   transition:0.4s;
-  opacity:0;
-  transform:translateY(30px);
-}
-
-.card.show{
-  opacity:1;
-  transform:translateY(0);
 }
 
 .card:hover{
@@ -139,25 +139,33 @@ h2{
   font-size:34px;
 }
 
-/* STATS */
-.stats{
-  display:flex;
-  justify-content:center;
-  gap:60px;
-  flex-wrap:wrap;
+/* FLOATING CTA */
+.floating{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:linear-gradient(90deg,#00f0ff,#2563eb);
+  color:#000;
+  padding:14px 22px;
+  border-radius:40px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(0,240,255,0.8);
+  animation:pulse 2s infinite;
+  z-index:1000;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+
+/* CONTACT SECTION */
+.contact-box{
   text-align:center;
 }
 
-.stat h3{
-  font-size:40px;
-  color:#00f0ff;
-}
-
-.stat p{
-  color:#94a3b8;
-}
-
-/* FOOTER */
 .footer{
   text-align:center;
   padding:60px 20px;
@@ -170,158 +178,97 @@ h2{
 </head>
 <body>
 
-<div class="bg"></div>
-<canvas id="particles"></canvas>
+<!-- NAV -->
+<div class="nav">
+  <div><strong>Abdul Basit</strong></div>
+  <div>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.linkedin.com/in/abdul-basit-301398158/" target="_blank">LinkedIn</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Abdul Basit</h1>
+  <img src="https://abdulbasiteverise.github.io/profile.png.png">
+  <h1>AI Workforce Decision Systems</h1>
   <p>
-    Building AI-Assisted Workforce Decision Infrastructure for Forecast Validation,
-    Intraday Governance, and Staffing Intelligence.
+    I help Workforce Management teams standardize forecast validation,
+    improve intraday decisions, and reduce operational risk using
+    structured AI-assisted decision frameworks.
   </p>
-  <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Explore ABIRE</a>
-  <a class="btn outline" href="https://www.linkedin.com/in/abdul-basit-301398158/" target="_blank">LinkedIn</a>
-</div>
 
-<!-- STATS -->
-<div class="section">
-  <div class="stats">
-    <div class="stat">
-      <h3 id="counter1">0</h3>
-      <p>Forecast Validations</p>
-    </div>
-    <div class="stat">
-      <h3 id="counter2">0</h3>
-      <p>Operational Risk Signals Built</p>
-    </div>
-    <div class="stat">
-      <h3 id="counter3">0</h3>
-      <p>AI Decision Systems Designed</p>
-    </div>
+  <div style="margin-top:35px;">
+    <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Explore ABIRE</a>
+    <a class="btn outline" href="https://wa.me/917079949538" target="_blank">Request Demo</a>
+    <a class="btn outline" href="mailto:abasit963@gmail.com">Email Me</a>
   </div>
 </div>
 
 <!-- TOOLS -->
-<div class="section">
+<div class="section" id="tools">
   <h2>AI Workforce Tools</h2>
   <div class="grid">
 
     <div class="card">
       <h3>ABIRE – Intelligent Reforecast Engine</h3>
-      <p>Structured forecast validation using deviation logic, pattern stability scoring, and confidence modeling.</p>
+      <p>Forecast validation using deviation logic and structured decision confidence scoring.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Open Tool</a>
     </div>
 
     <div class="card">
       <h3>Intraday Reforecast Calculator</h3>
-      <p>Real-time validation of forecast-to-now vs actual-to-now to determine reforecast necessity.</p>
+      <p>Real-time validation of forecast-to-now vs actual-to-now.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/Intraday-reforecasting-calculator/" target="_blank">Open Tool</a>
     </div>
 
     <div class="card">
       <h3>Variance Risk Analyzer</h3>
-      <p>Early workload drift detection and staffing impact modeling.</p>
+      <p>Detect early workload drift and staffing impact signals.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/Intraday-Variance-analysis/" target="_blank">Open Tool</a>
+    </div>
+
+    <div class="card">
+      <h3>Forecast Smoothing Engine</h3>
+      <p>Stabilize volatile forecasting patterns for consistent staffing.</p>
+      <a class="btn primary" href="https://abdulbasiteverise.github.io/Forecast-Smoothing/" target="_blank">Open Tool</a>
+    </div>
+
+    <div class="card">
+      <h3>BWIE WFM Simulator</h3>
+      <p>Simulate workload and staffing impact using WFM logic.</p>
+      <a class="btn primary" href="https://abdulbasiteverise.github.io/bwie-wfm-simulator/" target="_blank">Open Tool</a>
     </div>
 
   </div>
 </div>
 
-<!-- CASE STUDY -->
+<!-- CALENDLY -->
 <div class="section">
-  <h2>Case Study</h2>
+  <h2>Book a 15-Min Strategy Call</h2>
   <div class="card">
-    <p>
-      In a 5-week test scenario, ABIRE identified that 3 planned reforecasts were unnecessary,
-      validating the original forecast within a ±5% confidence band.
-      This prevented over-adjustment of staffing and preserved operational stability.
-    </p>
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/YOUR-CALENDLY-LINK"
+         style="min-width:320px;height:630px;"></div>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
 </div>
 
-<!-- TESTIMONIAL -->
-<div class="section">
-  <h2>Industry Feedback</h2>
+<!-- CONTACT -->
+<div class="section contact-box" id="contact">
+  <h2>Let’s Improve Your Forecast Governance</h2>
   <div class="card">
-    <p>
-      “Turning forecast validation into a structured decision process makes a lot of sense.
-      Curious to see how this evolves.”
-    </p>
+    <p>📱 WhatsApp: 7079949538</p>
+    <p>📧 Email: abasit963@gmail.com</p>
+    <a class="btn primary" href="https://wa.me/917079949538" target="_blank">Message on WhatsApp</a>
   </div>
 </div>
 
-<!-- FOOTER -->
+<a href="#contact" class="floating">Book 15-Min Strategy Call</a>
+
 <div class="footer">
   © 2026 Abdul Basit • AI Workforce Analytics Infrastructure
 </div>
-
-<script>
-
-/* SCROLL REVEAL */
-const cards=document.querySelectorAll('.card');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-cards.forEach(card=>observer.observe(card));
-
-/* COUNTERS */
-function animateCounter(id, target){
-let count=0;
-let interval=setInterval(()=>{
-count+=Math.ceil(target/50);
-if(count>=target){count=target;clearInterval(interval);}
-document.getElementById(id).innerText=count+"+";
-},40);
-}
-animateCounter("counter1",120);
-animateCounter("counter2",25);
-animateCounter("counter3",6);
-
-/* PARTICLES */
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let particles=[];
-for(let i=0;i<60;i++){
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2,
-d:Math.random()*1
-});
-}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle="rgba(0,240,255,0.5)";
-particles.forEach(p=>{
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-ctx.fill();
-});
-update();
-}
-
-function update(){
-particles.forEach(p=>{
-p.y+=p.d;
-if(p.y>canvas.height){
-p.y=0;
-p.x=Math.random()*canvas.width;
-}
-});
-}
-
-setInterval(draw,30);
-
-</script>
 
 </body>
 </html>
