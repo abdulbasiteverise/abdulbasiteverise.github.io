@@ -1,217 +1,326 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <!-- LINKEDIN / SOCIAL PREVIEW META TAGS -->
 
-<meta property="og:title" content="Abdul Basit | WFM Analytics Portfolio">
-<meta property="og:description" content="AI-powered Workforce Management tools solving real forecasting and intraday operational problems.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdul Basit | AI Workforce Decision Systems</title>
+
+<meta property="og:title" content="Abdul Basit | AI Workforce Decision Systems">
+<meta property="og:description" content="Forecast Governance. Intraday Intelligence. AI-Assisted Workforce Decision Infrastructure.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abdulbasiteverise.github.io/">
 
-<!-- Optional preview image (uses GitHub avatar for now) -->
-
-<meta property="og:image" content="https://abdulbasiteverise.github.io/preview.png.png">
-
-<meta name="twitter:card" content="summary_large_image">
-
-<title>Abdul Basit | WFM Analytics Portfolio</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
-}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
 
-/* GENERAL */
-body {
-  font-family: Arial, sans-serif;
-  background:#f4f6f8;
-  margin:0;
-}
-
-/* HEADER */
-.header {
-  background: linear-gradient(135deg, #0b3d91, #2563eb);
+body{
+  font-family:'Inter',sans-serif;
+  background:#050814;
   color:white;
-  padding:60px 20px;
+  overflow-x:hidden;
+}
+
+/* ANIMATED GRADIENT BG */
+.bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle at 20% 30%, rgba(0,200,255,0.15), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(37,99,235,0.15), transparent 40%);
+  z-index:-2;
+  animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse{
+  from{filter:blur(20px)}
+  to{filter:blur(60px)}
+}
+
+/* PARTICLES */
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+/* HERO */
+.hero{
   text-align:center;
+  padding:120px 20px 80px;
 }
 
-.header h1 {
-  margin:0;
-  font-size:36px;
+.hero h1{
+  font-size:54px;
+  font-weight:800;
+  background:linear-gradient(90deg,#00f0ff,#2563eb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-/* BUTTONS */
-.button {
+.hero p{
+  margin-top:20px;
+  color:#cbd5e1;
+  font-size:18px;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.btn{
   display:inline-block;
-  margin:8px;
-  padding:10px 18px;
-  background:white;
-  color:#0b3d91;
+  margin:12px;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:600;
   text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
-  transition:0.2s;
+  transition:0.3s;
 }
 
-.button:hover {
-  background:#e6ecff;
+.primary{
+  background:linear-gradient(90deg,#2563eb,#00f0ff);
+  color:#000;
 }
 
-/* CONTAINER */
-.container {
-  max-width:900px;
+.outline{
+  border:1px solid #00f0ff;
+  color:#00f0ff;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 25px rgba(0,240,255,0.7);
+}
+
+/* SECTION */
+.section{
+  max-width:1100px;
   margin:auto;
-  padding:30px;
+  padding:80px 20px;
 }
 
-/* CARDS */
-.card {
-  background:white;
-  padding:22px;
-  margin:20px 0;
-  border-radius:12px;
-  box-shadow:0 3px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+/* GLASS CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:35px;
+  margin:25px 0;
+  transition:0.4s;
   opacity:0;
-  transform:translateY(20px);
+  transform:translateY(30px);
 }
 
-.card.show {
+.card.show{
   opacity:1;
   transform:translateY(0);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 30px rgba(37,99,235,0.5);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:34px;
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+  text-align:center;
+}
+
+.stat h3{
+  font-size:40px;
+  color:#00f0ff;
+}
+
+.stat p{
+  color:#94a3b8;
 }
 
 /* FOOTER */
-.footer {
+.footer{
   text-align:center;
-  padding:30px;
-  color:#555;
+  padding:60px 20px;
+  color:#94a3b8;
+  font-size:14px;
 }
 
 </style>
 
 </head>
-
 <body>
 
-<!-- HEADER -->
+<div class="bg"></div>
+<canvas id="particles"></canvas>
 
-<div class="header">
-<h1>Abdul Basit</h1>
-<p><strong>Workforce Management Lead | Forecasting & Intraday Analytics Builder</strong></p>
-<p>AI-powered tools solving real WFM operational problems</p>
-
-<div style="margin-top:20px;">
-<a class="button" href="https://www.linkedin.com/in/abdul-basit-301398158/" target="_blank">LinkedIn</a>
-<a class="button" href="https://wa.me/917079949538" target="_blank">Request Demo (WhatsApp)</a>
-<a class="button" href="mailto:abasit963@gmail.com">Email Me</a>
+<!-- HERO -->
+<div class="hero">
+  <h1>Abdul Basit</h1>
+  <p>
+    Building AI-Assisted Workforce Decision Infrastructure for Forecast Validation,
+    Intraday Governance, and Staffing Intelligence.
+  </p>
+  <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Explore ABIRE</a>
+  <a class="btn outline" href="https://www.linkedin.com/in/abdul-basit-301398158/" target="_blank">LinkedIn</a>
 </div>
-</div>
 
-<!-- ABOUT -->
-
-<div style="text-align:center; padding:35px;">
-<img src="https://abdulbasiteverise.github.io/profile.png.png"
-style="width:120px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
-
-<h2>About Me</h2>
-
-<p style="max-width:700px; margin:auto;">
-I am a Workforce Management Lead specializing in forecasting accuracy,
-intraday analytics, and operational decision support. I build practical
-analytics tools that help WFM teams reduce operational risk, improve staffing
-decisions, and optimize performance using real-world WFM logic.
-</p>
+<!-- STATS -->
+<div class="section">
+  <div class="stats">
+    <div class="stat">
+      <h3 id="counter1">0</h3>
+      <p>Forecast Validations</p>
+    </div>
+    <div class="stat">
+      <h3 id="counter2">0</h3>
+      <p>Operational Risk Signals Built</p>
+    </div>
+    <div class="stat">
+      <h3 id="counter3">0</h3>
+      <p>AI Decision Systems Designed</p>
+    </div>
+  </div>
 </div>
 
 <!-- TOOLS -->
+<div class="section">
+  <h2>AI Workforce Tools</h2>
+  <div class="grid">
 
-<div class="container">
+    <div class="card">
+      <h3>ABIRE – Intelligent Reforecast Engine</h3>
+      <p>Structured forecast validation using deviation logic, pattern stability scoring, and confidence modeling.</p>
+      <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Open Tool</a>
+    </div>
 
-<div class="card">
-<h3>ABIRE Forecast Validator</h3>
-<p>Validates forecast reliability using historical performance patterns to prevent incorrect staffing decisions.</p>
-<a class="button" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Open Tool</a>
+    <div class="card">
+      <h3>Intraday Reforecast Calculator</h3>
+      <p>Real-time validation of forecast-to-now vs actual-to-now to determine reforecast necessity.</p>
+      <a class="btn primary" href="https://abdulbasiteverise.github.io/Intraday-reforecasting-calculator/" target="_blank">Open Tool</a>
+    </div>
+
+    <div class="card">
+      <h3>Variance Risk Analyzer</h3>
+      <p>Early workload drift detection and staffing impact modeling.</p>
+      <a class="btn primary" href="https://abdulbasiteverise.github.io/Intraday-Variance-analysis/" target="_blank">Open Tool</a>
+    </div>
+
+  </div>
 </div>
 
-<div class="card">
-<h3>Intraday Reforecasting Calculator</h3>
-<p>Helps WFM teams decide when reforecasting is operationally justified based on live deviation.</p>
-<a class="button" href="https://abdulbasiteverise.github.io/Intraday-reforecasting-calculator/" target="_blank">Open Tool</a>
+<!-- CASE STUDY -->
+<div class="section">
+  <h2>Case Study</h2>
+  <div class="card">
+    <p>
+      In a 5-week test scenario, ABIRE identified that 3 planned reforecasts were unnecessary,
+      validating the original forecast within a ±5% confidence band.
+      This prevented over-adjustment of staffing and preserved operational stability.
+    </p>
+  </div>
 </div>
 
-<div class="card">
-<h3>Intraday Variance Analysis</h3>
-<p>Measures real-time variance between forecast and actual workload to identify risks early.</p>
-<a class="button" href="https://abdulbasiteverise.github.io/Intraday-Variance-analysis/" target="_blank">Open Tool</a>
-</div>
-
-<div class="card">
-<h3>Forecast Smoothing Tool</h3>
-<p>Stabilizes volatile forecasting trends for more accurate staffing plans.</p>
-<a class="button" href="https://abdulbasiteverise.github.io/Forecast-Smoothing/" target="_blank">Open Tool</a>
-</div>
-
-<div class="card">
-<h3>BWIE WFM Simulator</h3>
-<p>Simulates workload and staffing outcomes using real WFM operational logic.</p>
-<a class="button" href="https://abdulbasiteverise.github.io/bwie-wfm-simulator/" target="_blank">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>Work With Me</h2>
-
-<p>I help WFM teams improve forecast accuracy, intraday decisions, and staffing efficiency using practical analytics tools.</p>
-
-<ul style="text-align:left;">
-<li>✔ Forecast validation frameworks</li>
-<li>✔ Intraday reforecasting strategy</li>
-<li>✔ Staffing optimization</li>
-<li>✔ WFM analytics automation</li>
-</ul>
-
-<p><strong>Interested in implementing these tools for your operation?</strong></p>
-
-<a class="button" href="https://wa.me/917079949538" target="_blank">Request Demo</a>
-
-</div>
-
+<!-- TESTIMONIAL -->
+<div class="section">
+  <h2>Industry Feedback</h2>
+  <div class="card">
+    <p>
+      “Turning forecast validation into a structured decision process makes a lot of sense.
+      Curious to see how this evolves.”
+    </p>
+  </div>
 </div>
 
 <!-- FOOTER -->
-
 <div class="footer">
-<p>Built by Abdul Basit • Workforce Management Analytics</p>
-<p>Available for WFM consulting & tool development</p>
+  © 2026 Abdul Basit • AI Workforce Analytics Infrastructure
 </div>
 
-<!-- FADE-IN SCRIPT -->
-
 <script>
-const cards = document.querySelectorAll('.card');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
+/* SCROLL REVEAL */
+const cards=document.querySelectorAll('.card');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
 });
+});
+cards.forEach(card=>observer.observe(card));
 
-cards.forEach(card => {
-  observer.observe(card);
+/* COUNTERS */
+function animateCounter(id, target){
+let count=0;
+let interval=setInterval(()=>{
+count+=Math.ceil(target/50);
+if(count>=target){count=target;clearInterval(interval);}
+document.getElementById(id).innerText=count+"+";
+},40);
+}
+animateCounter("counter1",120);
+animateCounter("counter2",25);
+animateCounter("counter3",6);
+
+/* PARTICLES */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+for(let i=0;i<60;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2,
+d:Math.random()*1
 });
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="rgba(0,240,255,0.5)";
+particles.forEach(p=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fill();
+});
+update();
+}
+
+function update(){
+particles.forEach(p=>{
+p.y+=p.d;
+if(p.y>canvas.height){
+p.y=0;
+p.x=Math.random()*canvas.width;
+}
+});
+}
+
+setInterval(draw,30);
+
 </script>
 
 </body>
