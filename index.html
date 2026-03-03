@@ -25,7 +25,7 @@ body{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(5,8,20,0.85);
+  background:rgba(5,8,20,0.9);
   backdrop-filter:blur(10px);
   padding:15px 40px;
   display:flex;
@@ -40,6 +40,7 @@ body{
   text-decoration:none;
   margin-left:25px;
   font-weight:500;
+  transition:0.3s;
 }
 
 .nav a:hover{
@@ -61,7 +62,7 @@ body{
 }
 
 .hero h1{
-  font-size:54px;
+  font-size:48px;
   font-weight:800;
   background:linear-gradient(90deg,#00f0ff,#2563eb);
   -webkit-background-clip:text;
@@ -72,7 +73,7 @@ body{
   margin-top:20px;
   color:#cbd5e1;
   font-size:18px;
-  max-width:700px;
+  max-width:750px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -81,12 +82,11 @@ body{
 .btn{
   display:inline-block;
   margin:12px;
-  padding:13px 28px;
+  padding:14px 28px;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
   transition:0.3s;
-  position:relative;
 }
 
 .primary{
@@ -136,7 +136,7 @@ body{
 h2{
   text-align:center;
   margin-bottom:50px;
-  font-size:34px;
+  font-size:32px;
 }
 
 /* FLOATING CTA */
@@ -161,11 +161,6 @@ h2{
   100%{transform:scale(1)}
 }
 
-/* CONTACT SECTION */
-.contact-box{
-  text-align:center;
-}
-
 .footer{
   text-align:center;
   padding:60px 20px;
@@ -184,6 +179,7 @@ h2{
   <div>
     <a href="#tools">Tools</a>
     <a href="#contact">Contact</a>
+    <a href="https://calendly.com/abasit963/30min" target="_blank">Book Call</a>
     <a href="https://www.linkedin.com/in/abdul-basit-301398158/" target="_blank">LinkedIn</a>
   </div>
 </div>
@@ -191,17 +187,20 @@ h2{
 <!-- HERO -->
 <div class="hero">
   <img src="https://abdulbasiteverise.github.io/profile.png.png">
+
   <h1>AI Workforce Decision Systems</h1>
+
   <p>
     I help Workforce Management teams standardize forecast validation,
-    improve intraday decisions, and reduce operational risk using
-    structured AI-assisted decision frameworks.
+    improve intraday decision logic, and reduce operational risk using
+    structured AI-assisted governance frameworks.
   </p>
 
   <div style="margin-top:35px;">
     <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Explore ABIRE</a>
     <a class="btn outline" href="https://wa.me/917079949538" target="_blank">Request Demo</a>
     <a class="btn outline" href="mailto:abasit963@gmail.com">Email Me</a>
+    <a class="btn outline" href="https://www.linkedin.com/in/abdul-basit-301398158/" target="_blank">LinkedIn</a>
   </div>
 </div>
 
@@ -212,7 +211,7 @@ h2{
 
     <div class="card">
       <h3>ABIRE – Intelligent Reforecast Engine</h3>
-      <p>Forecast validation using deviation logic and structured decision confidence scoring.</p>
+      <p>Structured forecast validation using deviation logic and confidence scoring.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Open Tool</a>
     </div>
 
@@ -223,48 +222,60 @@ h2{
     </div>
 
     <div class="card">
-      <h3>Variance Risk Analyzer</h3>
-      <p>Detect early workload drift and staffing impact signals.</p>
+      <h3>Intraday Variance Analysis</h3>
+      <p>Measure variance and detect workload drift early.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/Intraday-Variance-analysis/" target="_blank">Open Tool</a>
     </div>
 
     <div class="card">
       <h3>Forecast Smoothing Engine</h3>
-      <p>Stabilize volatile forecasting patterns for consistent staffing.</p>
+      <p>Stabilize volatile forecasting trends.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/Forecast-Smoothing/" target="_blank">Open Tool</a>
     </div>
 
     <div class="card">
       <h3>BWIE WFM Simulator</h3>
-      <p>Simulate workload and staffing impact using WFM logic.</p>
+      <p>Simulate workload and staffing outcomes using operational WFM logic.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/bwie-wfm-simulator/" target="_blank">Open Tool</a>
     </div>
 
   </div>
 </div>
 
-<!-- CALENDLY -->
+<!-- BOOKING -->
 <div class="section">
-  <h2>Book a 15-Min Strategy Call</h2>
-  <div class="card">
-    <div class="calendly-inline-widget"
-         data-url="https://calendly.com/YOUR-CALENDLY-LINK"
-         style="min-width:320px;height:630px;"></div>
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <h2>Book a 30-Min Strategy Call</h2>
+
+  <div class="card" style="text-align:center;">
+    <p style="margin-bottom:25px;color:#cbd5e1;">
+      Let’s review your forecast governance and intraday decision structure
+      and identify where AI validation can reduce risk.
+    </p>
+
+    <a class="btn primary"
+       href="https://calendly.com/abasit963/30min"
+       target="_blank">
+       Schedule 30-Min Call
+    </a>
   </div>
 </div>
 
 <!-- CONTACT -->
-<div class="section contact-box" id="contact">
-  <h2>Let’s Improve Your Forecast Governance</h2>
-  <div class="card">
+<div class="section" id="contact">
+  <h2>Contact</h2>
+
+  <div class="card" style="text-align:center;">
     <p>📱 WhatsApp: 7079949538</p>
     <p>📧 Email: abasit963@gmail.com</p>
-    <a class="btn primary" href="https://wa.me/917079949538" target="_blank">Message on WhatsApp</a>
+    <a class="btn outline" href="https://wa.me/917079949538" target="_blank">Message on WhatsApp</a>
   </div>
 </div>
 
-<a href="#contact" class="floating">Book 15-Min Strategy Call</a>
+<a href="https://calendly.com/abasit963/30min"
+   target="_blank"
+   class="floating">
+   Book 30-Min Strategy Call
+</a>
 
 <div class="footer">
   © 2026 Abdul Basit • AI Workforce Analytics Infrastructure
