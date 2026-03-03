@@ -15,17 +15,42 @@
 
 body{
   font-family:'Inter',sans-serif;
-  background:#050814;
+  background:#030712;
   color:white;
   overflow-x:hidden;
 }
 
-/* STICKY NAV */
+/* STAR CANVAS */
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+/* GRADIENT GLOW */
+.glow{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0,240,255,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(37,99,235,0.15), transparent 40%);
+  z-index:-2;
+  animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse{
+  from{filter:blur(30px)}
+  to{filter:blur(60px)}
+}
+
+/* NAV */
 .nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(5,8,20,0.9);
+  background:rgba(3,7,18,0.8);
   backdrop-filter:blur(10px);
   padding:15px 40px;
   display:flex;
@@ -39,12 +64,11 @@ body{
   color:#00f0ff;
   text-decoration:none;
   margin-left:25px;
-  font-weight:500;
   transition:0.3s;
 }
 
 .nav a:hover{
-  text-shadow:0 0 10px #00f0ff;
+  text-shadow:0 0 12px #00f0ff;
 }
 
 /* HERO */
@@ -57,12 +81,12 @@ body{
   width:130px;
   border-radius:50%;
   border:3px solid #2563eb;
-  box-shadow:0 0 30px rgba(0,240,255,0.6);
+  box-shadow:0 0 35px rgba(0,240,255,0.8);
   margin-bottom:25px;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:50px;
   font-weight:800;
   background:linear-gradient(90deg,#00f0ff,#2563eb);
   -webkit-background-clip:text;
@@ -72,7 +96,6 @@ body{
 .hero p{
   margin-top:20px;
   color:#cbd5e1;
-  font-size:18px;
   max-width:750px;
   margin-left:auto;
   margin-right:auto;
@@ -101,7 +124,7 @@ body{
 
 .btn:hover{
   transform:translateY(-4px);
-  box-shadow:0 0 25px rgba(0,240,255,0.8);
+  box-shadow:0 0 30px rgba(0,240,255,0.9);
 }
 
 /* SECTION */
@@ -109,6 +132,11 @@ body{
   max-width:1100px;
   margin:auto;
   padding:100px 20px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:50px;
 }
 
 /* CARD */
@@ -124,19 +152,13 @@ body{
 
 .card:hover{
   transform:translateY(-8px);
-  box-shadow:0 0 30px rgba(37,99,235,0.5);
+  box-shadow:0 0 40px rgba(37,99,235,0.6);
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
-}
-
-h2{
-  text-align:center;
-  margin-bottom:50px;
-  font-size:32px;
 }
 
 /* FLOATING CTA */
@@ -151,13 +173,13 @@ h2{
   font-weight:600;
   text-decoration:none;
   box-shadow:0 0 25px rgba(0,240,255,0.8);
-  animation:pulse 2s infinite;
+  animation:pulseBtn 2s infinite;
   z-index:1000;
 }
 
-@keyframes pulse{
+@keyframes pulseBtn{
   0%{transform:scale(1)}
-  50%{transform:scale(1.05)}
+  50%{transform:scale(1.08)}
   100%{transform:scale(1)}
 }
 
@@ -165,13 +187,15 @@ h2{
   text-align:center;
   padding:60px 20px;
   color:#94a3b8;
-  font-size:14px;
 }
 
 </style>
 
 </head>
 <body>
+
+<div class="glow"></div>
+<canvas id="stars"></canvas>
 
 <!-- NAV -->
 <div class="nav">
@@ -191,7 +215,7 @@ h2{
   <h1>AI Workforce Decision Systems</h1>
 
   <p>
-    I help Workforce Management teams standardize forecast validation,
+    Helping Workforce Management teams standardize forecast validation,
     improve intraday decision logic, and reduce operational risk using
     structured AI-assisted governance frameworks.
   </p>
@@ -200,7 +224,6 @@ h2{
     <a class="btn primary" href="https://abdulbasiteverise.github.io/abire-forecast-validator/" target="_blank">Explore ABIRE</a>
     <a class="btn outline" href="https://wa.me/917079949538" target="_blank">Request Demo</a>
     <a class="btn outline" href="mailto:abasit963@gmail.com">Email Me</a>
-    <a class="btn outline" href="https://www.linkedin.com/in/abdul-basit-301398158/" target="_blank">LinkedIn</a>
   </div>
 </div>
 
@@ -222,64 +245,94 @@ h2{
     </div>
 
     <div class="card">
-      <h3>Intraday Variance Analysis</h3>
-      <p>Measure variance and detect workload drift early.</p>
+      <h3>Variance Risk Analyzer</h3>
+      <p>Detect workload drift and staffing impact signals early.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/Intraday-Variance-analysis/" target="_blank">Open Tool</a>
     </div>
 
     <div class="card">
       <h3>Forecast Smoothing Engine</h3>
-      <p>Stabilize volatile forecasting trends.</p>
+      <p>Stabilize volatile forecasting patterns.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/Forecast-Smoothing/" target="_blank">Open Tool</a>
     </div>
 
     <div class="card">
       <h3>BWIE WFM Simulator</h3>
-      <p>Simulate workload and staffing outcomes using operational WFM logic.</p>
+      <p>Simulate workload and staffing outcomes using WFM logic.</p>
       <a class="btn primary" href="https://abdulbasiteverise.github.io/bwie-wfm-simulator/" target="_blank">Open Tool</a>
     </div>
 
   </div>
 </div>
 
-<!-- BOOKING -->
-<div class="section">
+<!-- CONTACT -->
+<div class="section" id="contact">
   <h2>Book a 30-Min Strategy Call</h2>
 
   <div class="card" style="text-align:center;">
-    <p style="margin-bottom:25px;color:#cbd5e1;">
-      Let’s review your forecast governance and intraday decision structure
-      and identify where AI validation can reduce risk.
-    </p>
-
     <a class="btn primary"
        href="https://calendly.com/abasit963/30min"
        target="_blank">
-       Schedule 30-Min Call
+       Schedule Call
     </a>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-  <h2>Contact</h2>
-
-  <div class="card" style="text-align:center;">
-    <p>📱 WhatsApp: 7079949538</p>
-    <p>📧 Email: abasit963@gmail.com</p>
-    <a class="btn outline" href="https://wa.me/917079949538" target="_blank">Message on WhatsApp</a>
+    <p style="margin-top:20px;">WhatsApp: 7079949538</p>
+    <p>Email: abasit963@gmail.com</p>
   </div>
 </div>
 
 <a href="https://calendly.com/abasit963/30min"
    target="_blank"
    class="floating">
-   Book 30-Min Strategy Call
+   Book Strategy Call
 </a>
 
 <div class="footer">
-  © 2026 Abdul Basit • AI Workforce Analytics Infrastructure
+  © 2026 Abdul Basit • AI Workforce Analytics
 </div>
+
+<script>
+
+/* STAR PARTICLES */
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+
+for(let i=0;i<120;i++){
+  stars.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    r:Math.random()*1.5,
+    d:Math.random()*0.5
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle="rgba(255,255,255,0.8)";
+  stars.forEach(s=>{
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fill();
+  });
+  update();
+}
+
+function update(){
+  stars.forEach(s=>{
+    s.y+=s.d;
+    if(s.y>canvas.height){
+      s.y=0;
+      s.x=Math.random()*canvas.width;
+    }
+  });
+}
+
+setInterval(draw,30);
+
+</script>
 
 </body>
 </html>
