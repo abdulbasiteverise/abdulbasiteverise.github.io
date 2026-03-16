@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage — Target: AI Workforce Intelligence Platform, workforce management tools -->
+  <url>
+    <loc>https://abdulbasiteverise.github.io/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ABIRE — Target: intraday reforecast calculator, AI forecast validation -->
+  <url>
+    <loc>https://abdulbasiteverise.github.io/abire-forecast-validator/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Intraday Reforecast — Target: intraday reforecast tool, WFM intelligence engine -->
+  <url>
+    <loc>https://abdulbasiteverise.github.io/wfm-intelligence-engine/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Variance Risk Analyzer — Target: contact center variance risk, staffing drift detection -->
+  <url>
+    <loc>https://abdulbasiteverise.github.io/Intraday-Variance-analysis/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Forecast Smoothing — Target: forecast smoothing engine, WFM forecasting stability -->
+  <url>
+    <loc>https://abdulbasiteverise.github.io/Forecast-Smoothing/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- BWIE Simulator — Target: call center staffing simulation, Erlang WFM simulator -->
+  <url>
+    <loc>https://abdulbasiteverise.github.io/bwie-wfm-simulator/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+</urlset>
